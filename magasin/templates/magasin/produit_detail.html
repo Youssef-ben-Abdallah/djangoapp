@@ -1,0 +1,33 @@
+{% extends './base.html' %}
+
+{% block content %}
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-lg">
+          <div class="card-header bg-secondary text-white">
+            <h1 class="display-4 mb-4 fw-bold text-center">{{ produit.libelle }}</h1>
+          </div>
+          <div class="card-body">
+            <div class="row justify-content-center mb-3">
+              <div class="col-md-9 col-lg-9">
+                <img src="/media/{{ produit.imag }}" class="img-fluid" alt="{{ produit.libelle }}">
+              </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+              <div class="col-md-10">
+                <p class="text-muted text-center">{{ produit.description }}</p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <h3 class="text-center">Prix: {{ produit.prix }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+{% endblock %}

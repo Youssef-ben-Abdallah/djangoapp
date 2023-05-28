@@ -1,0 +1,23 @@
+{% extends './base.html' %}
+{% block content %}
+<h1 class="display-4 mb-4 fw-bold text-center">Liste des catégories</h1>
+<div style="width : 700px ; margin: auto ; width: 50%;  padding: 10px;">
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody class="table-light">
+        {% for category in categories %}
+        <tr>
+            <td>{{ category.id }}</td>
+            <td><a href="{% url 'categorie_detail' category.id %}" class="list-group-item list-group-item-action">{{ category.name }}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+  {% endblock %}

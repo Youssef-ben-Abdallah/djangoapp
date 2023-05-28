@@ -1,0 +1,12 @@
+{% extends './base.html' %}
+
+{% block content %}
+    <div class="col-md-12 text-center">
+        <h2 class="display-4 mb-4 fw-bold text-center">Manip Commande ...... </h2>
+    </div>
+    <form method='POST' class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="mb-4 btn  btn-right">Enregistrer</button>
+    </form>
+{% endblock %}
